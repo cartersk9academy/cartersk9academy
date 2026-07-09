@@ -1,0 +1,16 @@
+Upload these extracted files to GitHub. Do not upload this ZIP file itself.
+
+This package intentionally does NOT include a CNAME file.
+Keep your existing CNAME file in GitHub.
+
+Important: Upload all files together into the main repository area:
+index.html
+style.css
+hero.jpeg
+puppy.jpeg
+basic.jpeg
+advanced.png
+behavior.jpeg
+contact.jpeg
+
+After uploading, commit changes and refresh your website after 1-3 minutes.
