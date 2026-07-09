@@ -25,12 +25,11 @@ body {
 
 .cta-button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 14px 22px;
-  background: #d4af37;
+  padding: 12px 20px;
+  background: gold;
   color: black;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
   border-radius: 6px;
 }
 
