@@ -4,29 +4,29 @@
   --gold2:#f2c94c;
 }
 
-/* RESET */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
-html,body{
-  width:100%;
-  overflow-x:hidden;
+body{
   font-family:Arial, Helvetica, sans-serif;
-  background:#000;
+  background:var(--black);
   color:var(--gold);
+  line-height:1.5;
 }
 
 /* HERO */
 .hero{
-  width:100%;
   min-height:100vh;
-  background:url("IMG_7220.png") center/cover no-repeat;
-  position:relative;
   display:flex;
   align-items:center;
+  justify-content:center;
+  background:url("IMG_7220.png") center/cover no-repeat;
+  position:relative;
+  text-align:center;
+  padding:60px 20px;
 }
 
 .hero::before{
@@ -39,32 +39,35 @@ html,body{
 .hero-content{
   position:relative;
   z-index:2;
-  width:100%;
-  max-width:1100px;
-  margin:auto;
-  padding:80px 20px;
-  text-align:left;
-}
-
-/* TEXT */
-h1,h2,h3,p,span{
-  color:var(--gold);
+  max-width:900px;
 }
 
 h1{
-  font-size:3rem;
+  font-size:3.2rem;
   font-family:Georgia, serif;
+  margin:10px 0;
+}
+
+.tagline{
+  font-size:1.2rem;
+  margin-bottom:20px;
 }
 
 /* BUTTON */
 .btn{
   display:inline-block;
-  padding:12px 18px;
+  padding:12px 20px;
   border:2px solid var(--gold);
   color:var(--gold);
   text-decoration:none;
+  font-weight:bold;
   margin-top:15px;
-  font-weight:700;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:var(--gold);
+  color:#000;
 }
 
 /* TRUST ROW */
@@ -92,16 +95,29 @@ h1{
   margin:auto;
 }
 
-/* ================= PROGRAMS ================= */
+.section-label{
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  color:var(--gold2);
+}
 
+/* TITLES */
+h2{
+  text-align:center;
+  font-family:Georgia, serif;
+  margin:10px 0 30px;
+  font-size:2.2rem;
+}
+
+/* CARDS */
 .cards{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
-  width:100%;
 }
 
-/* CARD FIX */
 .card{
   border:2px solid var(--gold);
   background:#0b0b0b;
@@ -110,42 +126,56 @@ h1{
   text-align:center;
 }
 
-/* IMAGE FIX (IMPORTANT FOR YOUR ISSUE) */
 .card img{
   width:100%;
-  height:220px;
+  height:240px;
   object-fit:cover;
-  object-position:center top;
-  display:block;
 }
 
-/* CARD TEXT */
 .card-body{
-  padding:14px;
+  padding:15px;
 }
 
 /* PRICING */
 .pricing-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:15px;
 }
 
 .price-card{
   border:2px solid var(--gold);
   padding:20px;
-  background:#0b0b0b;
   text-align:center;
+  background:#0b0b0b;
+}
+
+.price-card strong{
+  display:block;
+  margin-top:10px;
+  font-size:1.3rem;
+  color:var(--gold2);
 }
 
 .price-card.wide{
-  grid-column:span 4;
+  grid-column:span 3;
 }
 
-/* CONTACT IMAGE */
-.contact-img{
-  width:100%;
-  border:2px solid var(--gold);
+/* CONTACT */
+.contact-layout{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.contact-text{
+  text-align:center;
+  max-width:600px;
+}
+
+.contact-text a{
+  color:var(--gold2);
+  font-weight:bold;
 }
 
 /* FOOTER */
@@ -155,36 +185,31 @@ footer{
   border-top:2px solid var(--gold);
 }
 
-/* ================= MOBILE FIX (THIS IS WHY YOUR SITE LOOKS BROKEN) ================= */
-
+/* MOBILE */
 @media(max-width:900px){
-
-  .hero-content{
-    text-align:center;
-    padding:120px 15px 60px;
-  }
 
   h1{
     font-size:2.2rem;
   }
 
-  .cards,
+  .cards{
+    grid-template-columns:1fr;
+  }
+
   .pricing-grid{
     grid-template-columns:1fr;
+  }
+
+  .price-card.wide{
+    grid-column:span 1;
   }
 
   .trust-row{
     grid-template-columns:1fr 1fr;
   }
-
-  .card img{
-    height:260px;
-  }
 }
 
-/* SMALL PHONE FIX */
 @media(max-width:500px){
-
   .trust-row{
     grid-template-columns:1fr;
   }
