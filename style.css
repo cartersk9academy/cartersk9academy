@@ -2,8 +2,10 @@
   --black:#000;
   --gold:#d4af37;
   --gold2:#f2c94c;
+  --dark:#0a0a0a;
 }
 
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -17,16 +19,17 @@ body{
   line-height:1.5;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:url("IMG_7220.png") center/cover no-repeat;
   position:relative;
-  text-align:center;
+  background:url("IMG_7220.png") center/cover no-repeat;
   padding:60px 20px;
+  text-align:center;
 }
 
 .hero::before{
@@ -43,7 +46,7 @@ body{
 }
 
 h1{
-  font-size:3.2rem;
+  font-size:3rem;
   font-family:Georgia, serif;
   margin:10px 0;
 }
@@ -60,7 +63,7 @@ h1{
   border:2px solid var(--gold);
   color:var(--gold);
   text-decoration:none;
-  font-weight:bold;
+  font-weight:700;
   margin-top:15px;
   transition:0.3s;
 }
@@ -85,7 +88,8 @@ h1{
   text-transform:uppercase;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
+
 .section{
   padding:70px 20px;
 }
@@ -103,7 +107,6 @@ h1{
   color:var(--gold2);
 }
 
-/* TITLES */
 h2{
   text-align:center;
   font-family:Georgia, serif;
@@ -111,43 +114,62 @@ h2{
   font-size:2.2rem;
 }
 
-/* CARDS */
+/* ================= PROGRAM CARDS ================= */
+
 .cards{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:20px;
 }
 
+/* CARD */
 .card{
+  background:var(--dark);
   border:2px solid var(--gold);
-  background:#0b0b0b;
-  border-radius:10px;
+  border-radius:12px;
   overflow:hidden;
   text-align:center;
+  display:flex;
+  flex-direction:column;
+  transition:0.3s;
 }
 
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* ✅ FIXED IMAGE CENTERING (IMPORTANT) */
 .card img{
   width:100%;
-  height:240px;
+  height:260px;
   object-fit:cover;
+  object-position:center center;
+  display:block;
 }
 
+/* CARD TEXT */
 .card-body{
   padding:15px;
 }
 
-/* PRICING */
+.card-body h3{
+  margin-bottom:8px;
+}
+
+/* ================= PRICING ================= */
+
 .pricing-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px;
+  gap:18px;
 }
 
 .price-card{
+  background:var(--dark);
   border:2px solid var(--gold);
   padding:20px;
   text-align:center;
-  background:#0b0b0b;
+  border-radius:10px;
 }
 
 .price-card strong{
@@ -161,7 +183,8 @@ h2{
   grid-column:span 3;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact-layout{
   display:flex;
   justify-content:center;
@@ -175,17 +198,19 @@ h2{
 
 .contact-text a{
   color:var(--gold2);
-  font-weight:bold;
+  font-weight:700;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
   text-align:center;
   padding:30px;
   border-top:2px solid var(--gold);
 }
 
-/* MOBILE */
+/* ================= MOBILE FIX ================= */
+
 @media(max-width:900px){
 
   h1{
@@ -207,9 +232,14 @@ footer{
   .trust-row{
     grid-template-columns:1fr 1fr;
   }
+
+  .card img{
+    height:300px;
+  }
 }
 
 @media(max-width:500px){
+
   .trust-row{
     grid-template-columns:1fr;
   }
@@ -217,5 +247,9 @@ footer{
   .btn{
     width:100%;
     text-align:center;
+  }
+
+  h2{
+    font-size:1.6rem;
   }
 }
