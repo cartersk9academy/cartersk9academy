@@ -11,43 +11,43 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background: black;
   border-bottom: 1px solid gold;
 }
 
 .logo img {
-  height: 50px;
+  height: 55px;
 }
 
-.phone {
+.contact-top {
+  text-align: right;
   color: gold;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 /* HERO */
 .hero {
-  position: relative;
   height: 60vh;
   background: url("IMG_7406.jpeg") center/cover no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.45); /* LIGHTER so image shows */
 }
 
-.hero-content {
+.hero-text {
   position: relative;
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 34px;
   color: gold;
 }
 
@@ -63,35 +63,31 @@ body {
 
 .section h2 {
   color: gold;
-  margin-bottom: 20px;
 }
 
 /* CARDS */
 .card {
-  background: black;
-  border: 1px solid white;
-  margin: 15px auto;
   max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid white;
   border-radius: 10px;
   overflow: hidden;
+  background: black;
 }
 
 .card img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: 260px;
+  object-fit: cover; /* FIXES CUT OFF */
 }
 
-.card-text {
-  padding: 15px;
-}
-
-.card-text h3 {
+.card h3 {
   color: gold;
+  margin: 10px 0 5px;
 }
 
-/* INFO BOX */
-.info-box {
+/* WHY BOXES */
+.box {
   border: 1px solid gold;
   margin: 10px auto;
   padding: 10px;
@@ -100,28 +96,24 @@ body {
 
 /* PRICING */
 .pricing {
-  position: relative;
-  padding: 40px 15px;
-  text-align: center;
   background: url("IMG_7246.png") center/cover no-repeat;
+  padding: 40px 15px;
+  position: relative;
 }
 
-.pricing-overlay {
+.pricing::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.6);
-  top: 0;
-  left: 0;
 }
 
-.pricing h2 {
+.pricing h2,
+.price {
   position: relative;
-  color: gold;
 }
 
-.price-box {
-  position: relative;
+.price {
   border: 1px solid gold;
   margin: 10px auto;
   padding: 15px;
@@ -130,15 +122,17 @@ body {
 }
 
 /* POLICIES */
-.policy {
+.policies p {
   max-width: 600px;
-  margin: auto;
+  margin: 10px auto;
   line-height: 1.6;
 }
 
-.payment {
-  margin-top: 15px;
+/* SOCIAL */
+.social {
   color: gold;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* BOOK BUTTON */
@@ -147,7 +141,7 @@ body {
   padding: 30px;
 }
 
-.book-btn {
+.book a {
   background: gold;
   color: black;
   padding: 15px 25px;
