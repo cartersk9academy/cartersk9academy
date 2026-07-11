@@ -1,3 +1,4 @@
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -5,19 +6,21 @@
   font-family:Arial, sans-serif;
 }
 
+/* BODY */
 body{
   background:#000;
   color:#d4af37;
+  text-align:center;
 }
 
 /* NAV */
 .nav{
   position:fixed;
-  width:100%;
   top:0;
+  width:100%;
   background:#000;
-  z-index:1000;
   border-bottom:1px solid #d4af37;
+  z-index:1000;
 }
 
 .nav-inner{
@@ -34,44 +37,35 @@ body{
 
 .nav-links{
   display:flex;
-  gap:12px;
-  align-items:center;
+  gap:15px;
 }
 
 .nav-links a{
   color:#d4af37;
   text-decoration:none;
-  font-size:14px;
 }
 
-/* BOOK BUTTON */
-.book-btn{
-  background:#d4af37;
-  color:#000 !important;
-  padding:8px 14px;
-  border-radius:6px;
-  font-weight:bold;
-}
-
-/* HERO */
+/* HERO (FULL IMAGE FIX) */
 .hero{
   height:90vh;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
 
-  /* YOUR BACKGROUND */
-  background:url("IMG_7220.png") center/cover no-repeat;
+  /* IMPORTANT: FULL IMAGE (NO CROPPING) */
+  background:url("IMG_7220.png") center/contain no-repeat;
+  background-color:#000;
   position:relative;
 }
 
+/* OVERLAY */
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.35);
 }
 
+/* HERO TEXT */
 .hero-content{
   position:relative;
   z-index:2;
@@ -97,7 +91,6 @@ body{
 /* SECTIONS */
 .section{
   padding:70px 20px;
-  text-align:center;
 }
 
 /* GRID */
@@ -109,7 +102,7 @@ body{
   margin:auto;
 }
 
-/* CARD */
+/* CARDS */
 .card{
   border:2px solid #d4af37;
   border-radius:12px;
@@ -138,19 +131,19 @@ body{
   border-radius:10px;
 }
 
-/* FOOTER */
-footer{
-  padding:60px 20px;
-  text-align:center;
-  border-top:1px solid #d4af37;
-}
-
-footer h2{
-  margin-bottom:15px;
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 22px;
+  border:2px solid #d4af37;
+  color:#d4af37;
+  text-decoration:none;
 }
 
 /* MOBILE */
 @media(max-width:768px){
+
   .hero h1{
     font-size:2rem;
   }
