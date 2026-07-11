@@ -1,49 +1,141 @@
-/* =========================
-   CONTACT SECTION CENTER FIX
-========================= */
+:root{
+  --black:#050505;
+  --gold:#d6ad36;
+  --dark:#0b0b0b;
+}
 
-.contact{
-  padding:70px 20px;
-  text-align:center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  /* THIS FIXES “NOT CENTERED” ISSUE */
+body{
+  background:var(--black);
+  color:var(--gold);
+  font-family:Arial;
+}
+
+/* NAV */
+.top-nav{
+  position:fixed;
+  top:0;
+  width:100%;
   display:flex;
-  flex-direction:column;
+  justify-content:center;
+  gap:15px;
+  padding:10px;
+  background:rgba(0,0,0,0.9);
+  z-index:1000;
+}
+
+.top-nav a{
+  color:var(--gold);
+  text-decoration:none;
+  border:1px solid var(--gold);
+  padding:6px 10px;
+}
+
+/* HERO (FIXED BACKGROUND + READABLE TEXT) */
+.hero{
+  min-height:90vh;
+  display:flex;
   align-items:center;
   justify-content:center;
-  gap:12px;
+  text-align:center;
+  background:url("IMG_7220.png") center/cover no-repeat;
+  position:relative;
 }
 
-.contact h2{
-  margin-bottom:10px;
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45); /* lighter so image shows */
 }
 
-.contact-info{
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-  margin-bottom:15px;
+.hero-content{
+  position:relative;
+  z-index:2;
 }
 
-/* BUTTON FIX */
-.contact .btn{
+.hero h1{
+  font-size:3rem;
+}
+
+/* TRUST ROW */
+.trust-row{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:15px;
+}
+
+.trust-row span{
+  border:1px solid var(--gold);
+  padding:6px;
+}
+
+/* SECTIONS */
+.section{
+  padding:70px 20px;
+  text-align:center;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  border:2px solid var(--gold);
+  background:var(--dark);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+/* FIX IMAGES (FULL + CENTERED) */
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+/* TEXT */
+.card-body{
+  padding:15px;
+}
+
+/* PRICING */
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+.price-card{
+  border:2px solid var(--gold);
+  padding:20px;
+  background:var(--dark);
+}
+
+/* BUTTON */
+.btn{
   display:inline-block;
-  padding:14px 26px;
-  border:2px solid #d6ad36;
-  color:#d6ad36;
+  padding:12px 18px;
+  border:2px solid var(--gold);
+  color:var(--gold);
   text-decoration:none;
-  font-weight:bold;
-  border-radius:10px;
-  transition:0.3s;
+  margin-top:10px;
 }
 
-.contact .btn:hover{
-  background:#d6ad36;
-  color:#000;
-}
+/* MOBILE FIX */
+@media(max-width:768px){
+  .hero h1{font-size:2.2rem}
 
-/* PREVENT ANY CUT-OFF */
-.contact p{
-  margin:0;
-  word-wrap:break-word;
+  .cards,
+  .pricing-grid{
+    grid-template-columns:1fr;
+  }
 }
