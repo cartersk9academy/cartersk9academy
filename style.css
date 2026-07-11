@@ -21,7 +21,7 @@ body{
   text-align:center;
 
   /* YOUR BACKGROUND IMAGE */
-  background: url("/mnt/data/IMG_7220.png") center/cover no-repeat;
+  background: url("IMG_7220.png")
   position:relative;
 }
 
