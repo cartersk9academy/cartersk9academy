@@ -34,17 +34,14 @@ img{
   text-align:center;
 }
 
+/* LIGHTEN OVERLAY */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.75);
-}
 
-.hero-content{
-  position:relative;
-  padding:40px 20px;
-  max-width:900px;
+  /* THIS IS THE LIGHTEN EFFECT */
+  background:rgba(0,0,0,0.55);
 }
 
 /* =========================
