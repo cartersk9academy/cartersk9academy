@@ -168,3 +168,20 @@ footer {
     padding: 20px;
   }
 }
+.single-image-section{
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.single-image-section img{
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border: 2px solid gold;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(212,175,55,0.25);
+  display: block;
+}
