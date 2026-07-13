@@ -167,3 +167,55 @@ body{
 .sitelock-badge img:hover {
   transform: scale(1.05);
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  color: gold;
+  font-size: 2.2rem;
+  margin: 40px 0 20px;
+}
+
+/* GRID */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.pricing-card {
+  border: 1px solid gold;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* PRICE */
+.price {
+  font-size: 1.6rem;
+  color: gold;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.price.free {
+  color: #00ff99;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
