@@ -1,60 +1,90 @@
-/* ===== FIX BOTTOM CUT-OFF ISSUE ===== */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
+  background: black;
+  color: gold;
   overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
-/* prevents text from hitting screen edge */
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+}
+
+/* BOOK BUTTON */
+.book-btn {
+  background: gold;
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* TOP BACKGROUND */
+.top-bg {
+  height: 60vh;
+  background: url("IMG_7220.png") center/cover no-repeat;
+}
+
+/* IMAGE SECTION */
+.programs-section img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BOTTOM BACKGROUND */
+.bottom-bg {
+  height: 40vh;
+  background: url("IMG_7246.png") center/cover no-repeat;
+}
+
+/* TEXT SECTIONS */
 .bottom-section {
-  padding-bottom: 60px;
+  text-align: center;
+  padding: 25px 15px;
 }
 
-/* forces long lines to wrap properly */
-.bottom-section p {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  padding: 0 10px;
-  line-height: 1.5;
+.bottom-section h2 {
+  margin-bottom: 10px;
 }
 
-/* ensures footer never gets cut off */
+/* FOOTER */
 footer {
-  padding-bottom: 40px;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid gold;
 }
 
-/* extra mobile safety spacing */
+/* MOBILE FIXES */
 @media (max-width: 768px) {
-  .bottom-section {
-    padding-bottom: 80px;
+
+  .top-bg {
+    height: 45vh;
   }
 
-  footer {
-    padding-bottom: 60px;
+  .bottom-bg {
+    height: 30vh;
   }
-}
-/* =========================
-   FIX BOTTOM CUT OFF (iPhone safe)
-========================= */
 
-html, body {
-  height: 100%;
-}
+  .book-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
 
-body {
-  padding-bottom: 80px;
-}
-
-/* ensures last section never touches screen edge */
-.bottom-section:last-of-type {
-  margin-bottom: 40px;
-}
-
-/* extra breathing room for footer content */
-footer {
-  padding-bottom: 60px;
-}
-
-/* iPhone safe area support (VERY important) */
-body {
-  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  .bottom-section p {
+    font-size: 14px;
+  }
 }
