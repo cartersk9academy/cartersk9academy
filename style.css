@@ -7,3 +7,13 @@
     height:auto;
     z-index:10;
 }
+.hero{
+    width:100%;
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:auto;
+    display:block;
+}
