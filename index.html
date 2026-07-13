@@ -10,331 +10,12 @@
 
     <title>Carter's K9 Academy</title>
 
-    <style>
-        /* Reset */
-        * {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        body {
-            background: #000000;
-            color: #d4af37;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        /* Top picture */
-        .hero {
-            position: relative;
-            width: 100%;
-            background: #000000;
-        }
-
-        .hero-picture {
-            display: block;
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        /* Logo in top-left corner */
-        .logo {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            z-index: 10;
-            width: 85px;
-            height: auto;
-            border-radius: 6px;
-        }
-
-        /* Book Now button */
-        .book-now {
-            position: absolute;
-            top: 18px;
-            right: 12px;
-            z-index: 10;
-            display: inline-block;
-            padding: 11px 20px;
-            background: #d4af37;
-            color: #000000;
-            border: 2px solid #000000;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
-            font-size: 17px;
-            font-weight: 700;
-            line-height: 1.2;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        .book-now:hover,
-        .book-now:focus {
-            background: #ffd700;
-        }
-
-        /* General section layout */
-        section {
-            width: 100%;
-        }
-
-        .section-content {
-            width: 100%;
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 45px 18px;
-        }
-
-        h2 {
-            margin: 0 0 25px;
-            color: #d4af37;
-            font-size: clamp(1.6rem, 5vw, 2.25rem);
-            line-height: 1.25;
-            text-align: center;
-            overflow-wrap: anywhere;
-        }
-
-        /* Training Programs and Pricing */
-        .pricing-section {
-            background: #000000;
-            text-align: center;
-        }
-
-        .pricing-picture {
-            display: block;
-            width: 100%;
-            max-width: 900px;
-            height: auto;
-            margin: 0 auto;
-            object-fit: contain;
-        }
-
-        /* Pricing notice */
-        .pricing-notice {
-            width: 100%;
-            max-width: 750px;
-            margin: 28px auto 0;
-            padding: 22px 18px;
-            background: #111111;
-            border: 2px solid #d4af37;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .pricing-notice h3 {
-            margin: 0 0 14px;
-            color: #d4af37;
-            font-size: 1.35rem;
-        }
-
-        .pricing-notice p {
-            margin: 9px 0;
-            color: #ffffff;
-            font-size: 16px;
-            overflow-wrap: anywhere;
-        }
-
-        /* Why Choose Us */
-        .why-section {
-            background: #000000;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-        }
-
-        .why-card {
-            min-width: 0;
-            padding: 24px 18px;
-            background: #111111;
-            border: 2px solid #d4af37;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .why-card h3 {
-            margin: 0 0 12px;
-            color: #d4af37;
-            font-size: 1.2rem;
-            line-height: 1.3;
-            overflow-wrap: anywhere;
-        }
-
-        .why-card p {
-            margin: 0;
-            color: #ffffff;
-            font-size: 16px;
-            overflow-wrap: anywhere;
-        }
-
-        /* Hours */
-        .hours-section {
-            background: #000000;
-        }
-
-        .hours-box {
-            width: 100%;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 24px 18px;
-            background: #111111;
-            border: 2px solid #d4af37;
-            border-radius: 12px;
-        }
-
-        .hours-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 18px;
-            padding: 9px 0;
-            border-bottom: 1px solid #444444;
-            color: #ffffff;
-        }
-
-        .hours-row:last-of-type {
-            border-bottom: none;
-        }
-
-        .hours-day {
-            color: #d4af37;
-            font-weight: 700;
-        }
-
-        .hours-time {
-            text-align: right;
-        }
-
-        .appointment-note {
-            margin: 22px 0 0;
-            color: #d4af37;
-            font-size: 17px;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        /* Footer */
-        .footer {
-            width: 100%;
-            padding: 34px 18px;
-            background: #000000;
-            border-top: 2px solid #d4af37;
-            text-align: center;
-        }
-
-        .footer p {
-            margin: 12px 0;
-            color: #d4af37;
-            font-size: 17px;
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
-
-        .footer a {
-            color: #d4af37;
-            font-weight: 700;
-            text-decoration: none;
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
-
-        .footer a:hover,
-        .footer a:focus {
-            color: #ffd700;
-            text-decoration: underline;
-        }
-
-        /* Mobile phones */
-        @media (max-width: 700px) {
-            .section-content {
-                padding: 35px 14px;
-            }
-
-            .logo {
-                top: 8px;
-                left: 8px;
-                width: 58px;
-            }
-
-            .book-now {
-                top: 9px;
-                right: 8px;
-                padding: 8px 13px;
-                font-size: 14px;
-                border-radius: 6px;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .why-card {
-                padding: 20px 15px;
-            }
-
-            .pricing-notice {
-                padding: 20px 14px;
-            }
-
-            .hours-box {
-                padding: 20px 14px;
-            }
-
-            .hours-row {
-                align-items: flex-start;
-                font-size: 15px;
-            }
-
-            .footer {
-                padding: 28px 12px;
-            }
-
-            .footer p,
-            .footer a {
-                font-size: 15px;
-            }
-        }
-
-        /* Very small phones */
-        @media (max-width: 380px) {
-            .logo {
-                width: 50px;
-            }
-
-            .book-now {
-                padding: 7px 10px;
-                font-size: 13px;
-            }
-
-            .hours-row {
-                flex-direction: column;
-                gap: 2px;
-            }
-
-            .hours-time {
-                text-align: left;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Top picture, logo and booking button -->
+    <!-- Top image, logo and Book Now button -->
     <header class="hero">
 
         <img
@@ -362,9 +43,10 @@
 
     <!-- Training Programs and Pricing -->
     <section class="pricing-section">
+
         <div class="section-content">
 
-            <h2>Training Programs &amp; Pricing</h2>
+            <h1>Training Programs &amp; Pricing</h1>
 
             <img
                 src="IMG_7444.png"
@@ -374,7 +56,7 @@
 
             <div class="pricing-notice">
 
-                <h3>Pricing Notice</h3>
+                <h2>Pricing Notice</h2>
 
                 <p>
                     All prices are subject to change without notice.
@@ -386,16 +68,18 @@
 
                 <p>
                     We accept Cash, Debit Card, Credit Card,
-                    Electronic Payment
+                    and Electronic Payment.
                 </p>
 
             </div>
 
         </div>
+
     </section>
 
     <!-- Why Choose Us -->
     <section class="why-section">
+
         <div class="section-content">
 
             <h2>Why Choose Carter's K9 Academy?</h2>
@@ -403,48 +87,58 @@
             <div class="why-grid">
 
                 <div class="why-card">
+
                     <h3>Private One-on-One Training</h3>
 
                     <p>
-                        Every lesson is tailored specifically to you and
-                        your dog for personalized attention and lasting results.
+                        Every lesson is tailored specifically to you and your
+                        dog for personalized attention and lasting results.
                     </p>
+
                 </div>
 
                 <div class="why-card">
+
                     <h3>Positive Reinforcement</h3>
 
                     <p>
                         Reward-based training methods help build confidence,
                         trust, and a stronger bond.
                     </p>
+
                 </div>
 
                 <div class="why-card">
+
                     <h3>Real-Life Training</h3>
 
                     <p>
                         Training focuses on practical skills your dog can use
                         every day at home and in public.
                     </p>
+
                 </div>
 
                 <div class="why-card">
+
                     <h3>Committed to Your Success</h3>
 
                     <p>
                         We help owners build well-mannered, confident
                         companions through consistency and guidance.
                     </p>
+
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
     <!-- Hours -->
     <section class="hours-section">
+
         <div class="section-content">
 
             <h2>Hours</h2>
@@ -493,9 +187,10 @@
             </div>
 
         </div>
+
     </section>
 
-    <!-- Email and Facebook -->
+    <!-- Contact information -->
     <footer class="footer">
 
         <p>
