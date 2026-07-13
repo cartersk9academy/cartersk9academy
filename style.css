@@ -1,278 +1,170 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-body{
-  background:black;
-  color:gold;
-  overflow-x:hidden;
-  line-height:1.5;
-}
-
-/* HEADER */
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 20px;
-  border-bottom:1px solid gold;
-}
-
-.logo, .phone{
-  font-weight:600;
-  font-size:14px;
-}
-
-/* HERO */
-.hero{
-  height:90vh;
-  position:relative;
-  background:url("IMG_7220.png") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-}
-
-/* light overlay so image shows but text is readable */
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.35);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:90%;
-}
-
-.hero h1{
-  font-size:34px;
-  line-height:1.2;
-}
-
-.sub{
-  margin-top:8px;
-}
-
-.tagline{
-  margin:10px 0 20px;
-  font-size:14px;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  padding:12px 20px;
-  background:gold;
-  color:black;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:8px;
-}
-
-/* ===== PRICING SECTION FIX (PRO LOOK) ===== */
-
-.pricing-section {
+/* BODY */
+body {
   background: #000;
-  padding: 60px 20px;
   color: #fff;
 }
 
-.section-title {
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #000;
+  border-bottom: 1px solid gold;
+}
+
+.logo {
+  color: gold;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.phone {
+  color: gold;
+  font-size: 16px;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 90vh;
+  background: url("IMG_7220.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* DARK OVERLAY (so text is readable but image shows) */
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  padding: 40px;
   text-align: center;
-  color: gold;
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-/* makes it NOT feel like a wall of text */
-.pricing-section h3 {
-  color: gold;
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-}
-
-.pricing-section p {
-  color: #e6e6e6;
-  line-height: 1.6;
-  font-size: 1rem;
-  margin: 6px 0 15px;
-}
-
-/* MAIN CONTAINER */
-.pricing-section {
-  max-width: 900px;
-  margin: auto;
-}
-
-/* EACH ITEM BLOCK */
-.pricing-section > div {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 215, 0, 0.35);
   border-radius: 12px;
-  padding: 20px 25px;
-  margin-bottom: 18px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
-/* PRICE STYLE */
-.price {
+.hero h1 {
   color: gold;
-  font-size: 1.6rem;
+  font-size: 40px;
+}
+
+.hero p {
+  color: white;
+  margin: 10px 0 20px;
+}
+
+.btn {
+  background: gold;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
   font-weight: bold;
 }
 
-/* FREE TEXT */
-.price.free {
-  color: #00ff99;
+/* PROGRAMS */
+.programs {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.programs h2 {
+  color: gold;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* CARD LAYOUT */
+.card {
+  background: #111;
+  border: 1px solid gold;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.card span {
+  color: gold;
   font-weight: bold;
-}
-
-/* MOBILE FIX */
-@media (max-width: 600px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .pricing-section > div {
-    padding: 15px;
-  }
-}
-
-/* CARDS */
-.card{
-  max-width:520px;
-  margin:20px auto;
-  border:1px solid gold;
-  border-radius:12px;
-  overflow:hidden;
-  background:black;
-}
-
-.card img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  display:block;
-}
-
-.card h3{
-  margin-top:10px;
-}
-
-.card p{
-  padding:10px 15px 20px;
-  font-size:14px;
+  font-size: 18px;
 }
 
 /* PRICING */
-.pricing{
-  background:#050505;
-}
-
-.box{
-  max-width:520px;
-  margin:auto;
-  border:1px solid gold;
-  padding:20px;
-  border-radius:10px;
-}
-
-.box p{
-  margin:10px 0;
-  font-size:15px;
-  color:#f5d77a;
-}
-
-/* INFO */
-.info ul{
-  list-style:none;
-  margin:20px 0;
-}
-
-.info li{
-  margin:8px 0;
-}
-
-/* FOOTER */
-.footer{
-  padding:40px 20px;
-  text-align:center;
-  border-top:1px solid gold;
-  font-size:14px;
-}
-.sitelock-badge {
+.pricing-note {
+  padding: 40px 20px;
   text-align: center;
-  margin-top: 40px;
+}
+
+.pricing-note h2 {
+  color: gold;
+  margin-bottom: 15px;
+}
+
+.pricing-note p {
+  margin: 8px 0;
+  color: #ddd;
+}
+
+/* WHY SECTION */
+.why {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.why h2 {
+  color: gold;
   margin-bottom: 20px;
 }
 
-.sitelock-badge img {
-  max-width: 160px;
-  height: auto;
-  display: inline-block;
-  transition: transform 0.2s ease;
+.why ul {
+  list-style: none;
 }
 
-.sitelock-badge img:hover {
-  transform: scale(1.05);
-}
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-}
-
-/* SECTION TITLE */
-.section-title {
-  text-align: center;
-  color: gold;
-  font-size: 2.2rem;
-  margin: 40px 0 20px;
-}
-
-/* GRID */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* CARD */
-.pricing-card {
-  border: 1px solid gold;
-  padding: 20px;
-  border-radius: 12px;
-  background: rgba(0,0,0,0.6);
-  text-align: center;
-}
-
-/* PRICE */
-.price {
-  font-size: 1.6rem;
-  color: gold;
-  font-weight: bold;
+.why li {
   margin: 10px 0;
+  color: #ddd;
 }
 
-.price.free {
-  color: #00ff99;
+/* FOOTER */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid gold;
+  margin-top: 40px;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 600px) {
-  .section-title {
-    font-size: 1.6rem;
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-overlay {
+    padding: 20px;
   }
 }
