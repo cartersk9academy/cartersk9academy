@@ -14,15 +14,28 @@ body{
    HERO BACKGROUND FIX
 ======================= */
 .hero{
+  position:relative;
   height:90vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
 
-  /* YOUR BACKGROUND IMAGE */
-  background: url("IMG_7220.png")
+  background:url("IMG_7220.png") center/cover no-repeat;
+}
+
+/* SOFT LIGHT OVERLAY (makes it clean + bright but readable) */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35); /* LOWER = brighter image */
+}
+
+/* keeps text above overlay */
+.hero-content{
   position:relative;
+  z-index:2;
 }
 
 /* dark overlay so text shows */
