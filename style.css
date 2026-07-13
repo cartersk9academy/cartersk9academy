@@ -76,17 +76,74 @@ body{
   border-radius:8px;
 }
 
-/* SECTIONS */
-.section, .pricing, .info{
-  padding:60px 18px;
-  text-align:center;
+/* ===== PRICING SECTION FIX (PRO LOOK) ===== */
+
+.pricing-section {
+  background: #000;
+  padding: 60px 20px;
+  color: #fff;
 }
 
-.section h2,
-.pricing h2,
-.info h2{
-  margin-bottom:20px;
-  font-size:22px;
+.section-title {
+  text-align: center;
+  color: gold;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* makes it NOT feel like a wall of text */
+.pricing-section h3 {
+  color: gold;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.pricing-section p {
+  color: #e6e6e6;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 6px 0 15px;
+}
+
+/* MAIN CONTAINER */
+.pricing-section {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* EACH ITEM BLOCK */
+.pricing-section > div {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* PRICE STYLE */
+.price {
+  color: gold;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* FREE TEXT */
+.price.free {
+  color: #00ff99;
+  font-weight: bold;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .pricing-section > div {
+    padding: 15px;
+  }
 }
 
 /* CARDS */
