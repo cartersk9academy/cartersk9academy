@@ -1,90 +1,9 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: black;
-  color: gold;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-}
-
-/* TOP BAR */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 15px;
-}
-
-/* BOOK BUTTON */
-.book-btn {
-  background: gold;
-  color: black;
-  padding: 10px 14px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-/* TOP BACKGROUND */
-.top-bg {
-  height: 60vh;
-  background: url("IMG_7220.png") center/cover no-repeat;
-}
-
-/* IMAGE SECTION */
-.programs-section img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* BOTTOM BACKGROUND */
-.bottom-bg {
-  height: 40vh;
-  background: url("IMG_7246.png") center/cover no-repeat;
-}
-
-/* TEXT SECTIONS */
-.bottom-section {
-  text-align: center;
-  padding: 25px 15px;
-}
-
-.bottom-section h2 {
-  margin-bottom: 10px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid gold;
-}
-
-/* MOBILE FIXES */
-@media (max-width: 768px) {
-
-  .top-bg {
-    height: 45vh;
-  }
-
-  .bottom-bg {
-    height: 30vh;
-  }
-
-  .book-btn {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-
-  .bottom-section p {
-    font-size: 14px;
-  }
+/* Logo */
+.logo{
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:90px;
+    height:auto;
+    z-index:10;
 }
