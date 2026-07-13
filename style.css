@@ -32,3 +32,29 @@ footer {
     padding-bottom: 60px;
   }
 }
+/* =========================
+   FIX BOTTOM CUT OFF (iPhone safe)
+========================= */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+/* ensures last section never touches screen edge */
+.bottom-section:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* extra breathing room for footer content */
+footer {
+  padding-bottom: 60px;
+}
+
+/* iPhone safe area support (VERY important) */
+body {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+}
