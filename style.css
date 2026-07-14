@@ -1,7 +1,7 @@
 /* ========================================
    Carter's K9 Academy
    Complete Mobile-Friendly CSS
-   No Boxes + Transparent Images
+   No Boxes + Faded Images
 ======================================== */
 
 * {
@@ -28,10 +28,6 @@ img {
     max-width: 100%;
 }
 
-/* ========================================
-   Hero
-======================================== */
-
 .hero {
     position: relative;
     width: 100%;
@@ -42,7 +38,8 @@ img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    opacity: 0.88;
+    opacity: 0.60;
+    transition: opacity 0.3s ease;
 }
 
 .logo {
@@ -83,10 +80,6 @@ img {
     transform: translateY(-2px);
 }
 
-/* ========================================
-   General Layout
-======================================== */
-
 section {
     width: 100%;
 }
@@ -106,6 +99,7 @@ h3 {
     color: #d4af37;
     overflow-wrap: anywhere;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.88);
+    background: transparent;
 }
 
 h1,
@@ -119,11 +113,8 @@ h2 {
 p {
     color: #ffffff;
     overflow-wrap: anywhere;
+    background: transparent;
 }
-
-/* ========================================
-   Pricing
-======================================== */
 
 .pricing-section {
     background:
@@ -142,7 +133,8 @@ p {
     height: auto;
     margin: 0 auto;
     object-fit: contain;
-    opacity: 0.88;
+    opacity: 0.60;
+    transition: opacity 0.3s ease;
 }
 
 .pricing-notice {
@@ -170,24 +162,38 @@ p {
     font-size: 16px;
 }
 
-/* ========================================
-   Background Photo Sections
-======================================== */
-
 .photo-section {
     position: relative;
     width: 100%;
     min-height: 500px;
+    overflow: hidden;
+    background: #000000;
+}
+
+.photo-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0.60;
 }
 
 .background-one {
+    background-image: none;
+}
+
+.background-one::before {
     background-image: url("./1000014129.jpeg");
 }
 
 .background-two {
+    background-image: none;
+}
+
+.background-two::before {
     background-image: url("./IMG_7216.jpeg");
 }
 
@@ -195,7 +201,7 @@ p {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.08);
 }
 
 .photo-content {
@@ -204,10 +210,6 @@ p {
     padding-top: 70px;
     padding-bottom: 70px;
 }
-
-/* ========================================
-   Why Choose Us
-======================================== */
 
 .why-grid {
     display: grid;
@@ -239,10 +241,6 @@ p {
     font-size: 16px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
-
-/* ========================================
-   Hours
-======================================== */
 
 .hours-box {
     width: 100%;
@@ -286,10 +284,6 @@ p {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
-/* ========================================
-   Footer
-======================================== */
-
 .footer {
     width: 100%;
     padding: 40px 16px;
@@ -319,7 +313,8 @@ p {
     height: auto;
     margin: 0 auto 20px;
     object-fit: contain;
-    opacity: 0.88;
+    opacity: 0.60;
+    transition: opacity 0.3s ease;
 }
 
 .footer-contact {
@@ -353,10 +348,6 @@ p {
     text-decoration: underline;
 }
 
-/* ========================================
-   Mobile
-======================================== */
-
 @media (max-width: 700px) {
     .section-content {
         padding: 36px 14px;
@@ -377,6 +368,9 @@ p {
 
     .photo-section {
         min-height: auto;
+    }
+
+    .photo-section::before {
         background-position: center center;
     }
 
@@ -386,7 +380,7 @@ p {
     }
 
     .photo-overlay {
-        background: rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.10);
     }
 
     .why-grid {
@@ -425,10 +419,6 @@ p {
         font-size: 15px;
     }
 }
-
-/* ========================================
-   Very Small Phones
-======================================== */
 
 @media (max-width: 380px) {
     .logo {
