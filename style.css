@@ -395,3 +395,33 @@ p {
 }
     }
 }
+/* =========================
+   REMOVE BOXES ONLY FROM FEATURE SECTIONS
+========================= */
+
+/* remove styling but keep text */
+.bottom-section {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* remove any inner container boxes */
+.bottom-section div {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ensure headings stay clean */
+.bottom-section h2 {
+  color: gold !important;
+  background: none !important;
+}
+
+/* ensure text stays visible */
+.bottom-section p {
+  color: gold !important;
+  background: none !important;
+}
