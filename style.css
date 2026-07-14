@@ -359,3 +359,21 @@ p {
     }
 
 }
+/* REMOVE ALL CARD / BOX BACKGROUNDS COMPLETELY */
+
+.card,
+.box,
+.bottom-section > div,
+.bottom-section div,
+section div {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+}
+
+/* keep text clean */
+h1, h2, h3, p {
+  background: transparent !important;
+}
