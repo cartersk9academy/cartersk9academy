@@ -1,451 +1,879 @@
-<!DOCTYPE html>
+/* ========================================
 
-<html lang="en">
+   Carter's K9 Academy
 
-<head>
+   Complete Mobile-Friendly CSS
 
-    <meta charset="UTF-8">
+   No Boxes + Faded Images
 
- 
+======================================== */
 
-    <meta
+ 
 
-        name="viewport"
+* {
 
-        content="width=device-width, initial-scale=1.0"
+    box-sizing: border-box;
 
-    >
+}
 
  
 
-    <title>Carter's K9 Academy</title>
+html,
 
- 
+body {
 
-    <link rel="stylesheet" href="style.css">
+    width: 100%;
 
-</head>
+    margin: 0;
 
+    padding: 0;
+
+    overflow-x: hidden;
+
+}
+
  
+
+body {
 
-<body>
+    background: #000000;
 
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.6;
+
+}
+
  
+
+img {
+
+    display: block;
+
+    max-width: 100%;
 
-    <header class="hero">
+}
 
  
 
-        <img
+.hero {
 
-            src="IMG_7220.png"
+    position: relative;
 
-            alt="Carter's K9 Academy"
+    width: 100%;
 
-            class="hero-picture"
+    background: #000000;
 
-        >
+}
 
  
 
-        <img
+.hero-picture {
 
-            src="IMG_7172.jpeg"
+    width: 100%;
 
-            alt="Carter's K9 Academy logo"
+    height: auto;
 
-            class="logo"
+    object-fit: contain;
 
-        >
+    opacity: 0.60;
 
+    transition: opacity 0.3s ease;
+
+}
+
  
 
-        <a
+.logo {
 
-            href="https://carters-k9-academy.square.site"
+    position: absolute;
 
-            class="book-now"
+    top: 12px;
 
-            target="_blank"
+    left: 12px;
 
-            rel="noopener noreferrer"
+    z-index: 10;
 
-        >
+    width: 85px;
 
-            Book Now
+    height: auto;
 
-        </a>
+    border-radius: 8px;
 
- 
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.55);
 
-    </header>
+}
 
  
+
+.book-now {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 12px;
+
+    z-index: 10;
+
+    display: inline-block;
+
+    padding: 13px 26px;
+
+    background: #d4af37;
+
+    color: #000000;
+
+    border: none;
+
+    border-radius: 50px;
 
-    <section class="pricing-section">
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+
+}
+
  
 
-        <div class="section-content">
+.book-now:hover,
 
+.book-now:focus {
+
+    background: #ffd700;
+
+    color: #000000;
+
+    transform: translateY(-2px);
+
+}
+
  
+
+section {
+
+    width: 100%;
 
-            <h1>Training Programs &amp; Pricing</h1>
+}
 
  
 
-            <img
+.section-content {
 
-                src="IMG_7444.png"
+    position: relative;
 
-                alt="Carter's K9 Academy training programs and pricing"
+    z-index: 2;
 
-                class="pricing-picture"
+    width: 100%;
 
-            >
+    max-width: 1050px;
 
- 
+    margin: 0 auto;
 
-            <div class="pricing-notice">
+    padding: 48px 18px;
 
+}
+
  
+
+h1,
+
+h2,
+
+h3 {
+
+    color: #d4af37;
+
+    overflow-wrap: anywhere;
 
-                <h2>Pricing Notice</h2>
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.88);
 
+    background: transparent;
+
+}
+
  
+
+h1,
+
+h2 {
 
-                <p>
+    margin: 0 0 25px;
 
-                    All prices are subject to change without notice.
+    font-size: clamp(1.6rem, 5vw, 2.25rem);
 
-                </p>
+    line-height: 1.25;
 
+    text-align: center;
+
+}
+
  
+
+p {
+
+    color: #ffffff;
 
-                <p>
+    overflow-wrap: anywhere;
 
-                    Deposits are required to schedule an appointment.
+    background: transparent;
 
-                </p>
+}
 
  
 
-                <p>
+.pricing-section {
 
-                    We accept Cash, Debit Card, Credit Card,
+    background:
 
-                    and Electronic Payment.
+        radial-gradient(
 
-                </p>
+            circle at top,
 
+            rgba(212, 175, 55, 0.14),
+
+            transparent 45%
+
+        ),
+
+        #000000;
+
+    text-align: center;
+
+}
+
  
+
+.pricing-picture {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+
+    opacity: 0.60;
+
+    transition: opacity 0.3s ease;
 
-            </div>
+}
 
  
 
-        </div>
+.pricing-notice {
 
+    width: 100%;
+
+    max-width: 750px;
+
+    margin: 28px auto 0;
+
+    padding: 24px 18px;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+
+}
+
  
+
+.pricing-notice h2 {
+
+    margin: 0 0 14px;
+
+    font-size: 1.35rem;
 
-    </section>
+}
 
  
 
-    <section class="photo-section background-one">
+.pricing-notice p {
 
+    margin: 9px 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+}
+
  
+
+.photo-section {
+
+    position: relative;
+
+    width: 100%;
 
-        <div class="photo-overlay"></div>
+    min-height: 500px;
 
+    overflow: hidden;
+
+    background: #000000;
+
+}
+
  
+
+.photo-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
 
-        <div class="section-content photo-content">
+    z-index: 0;
 
+    background-position: center center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    opacity: 0.60;
+
+}
+
  
+
+.background-one {
+
+    background-image: none;
 
-            <h2>Why Choose Carter's K9 Academy?</h2>
+}
 
  
 
-            <div class="why-grid">
+.background-one::before {
 
+    background-image: url("./1000014129.jpeg");
+
+}
+
  
+
+.background-two {
+
+    background-image: none;
 
-                <div class="why-card">
+}
 
  
 
-                    <h3>Private One-on-One Training</h3>
+.background-two::before {
 
+    background-image: url("./IMG_7216.jpeg");
+
+}
+
  
 
-                    <p>
+.photo-overlay {
 
-                        Every lesson is tailored specifically to you and your
+    position: absolute;
 
-                        dog for personalized attention and lasting results.
+    inset: 0;
 
-                    </p>
+    z-index: 1;
 
- 
+    background: rgba(0, 0, 0, 0.08);
 
-                </div>
+}
 
  
 
-                <div class="why-card">
+.photo-content {
 
- 
+    position: relative;
 
-                    <h3>Positive Reinforcement</h3>
+    z-index: 2;
 
+    padding-top: 70px;
+
+    padding-bottom: 70px;
+
+}
+
  
 
-                    <p>
+.why-grid {
 
-                        Reward-based training methods help build confidence,
+    display: grid;
 
-                        trust, and a stronger bond.
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-                    </p>
+    gap: 20px;
 
+}
+
  
 
-                </div>
+.why-card {
 
- 
+    min-width: 0;
 
-                <div class="why-card">
+    padding: 24px 18px;
 
- 
+    text-align: center;
 
-                    <h3>Real-Life Training</h3>
+    background: transparent;
 
- 
+    border: none;
 
-                    <p>
+    border-radius: 0;
 
-                        Training focuses on practical skills your dog can use
+    box-shadow: none;
 
-                        every day at home and in public.
+    backdrop-filter: none;
 
-                    </p>
+    -webkit-backdrop-filter: none;
 
+}
+
  
 
-                </div>
+.why-card h3 {
 
- 
+    margin: 0 0 12px;
 
-                <div class="why-card">
+    font-size: 1.2rem;
 
- 
+    line-height: 1.3;
 
-                    <h3>Committed to Your Success</h3>
+}
 
  
 
-                    <p>
+.why-card p {
 
-                        We help owners build well-mannered, confident
+    margin: 0;
 
-                        companions through consistency and guidance.
+    color: #ffffff;
 
-                    </p>
+    font-size: 16px;
 
- 
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 
-                </div>
+}
 
  
+
+.hours-box {
+
+    width: 100%;
+
+    max-width: 650px;
 
-            </div>
+    margin: 0 auto;
 
+    padding: 24px 18px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+
+}
+
  
+
+.hours-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 10px 0;
+
+    border-bottom: none;
 
-        </div>
+    color: #ffffff;
 
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+
+}
+
  
+
+.hours-day {
 
-    </section>
+    color: #d4af37;
 
+    font-weight: 700;
+
+}
+
  
+
+.hours-time {
+
+    color: #ffffff;
 
-    <section class="photo-section background-two">
+    text-align: right;
 
+}
+
  
+
+.appointment-note {
+
+    margin: 22px 0 0;
+
+    color: #d4af37;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    text-align: center;
 
-        <div class="photo-overlay"></div>
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 
+}
+
  
+
+.footer {
+
+    width: 100%;
 
-        <div class="section-content photo-content">
+    padding: 40px 16px;
 
+    background: #000000;
+
+    border-top: 2px solid #d4af37;
+
+}
+
  
+
+.footer-box {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
 
-            <h2>Hours</h2>
+    background: transparent;
 
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+}
+
  
+
+.footer-picture {
+
+    display: block;
+
+    width: 75%;
 
-            <div class="hours-box">
+    max-width: 650px;
 
+    height: auto;
+
+    margin: 0 auto 20px;
+
+    object-fit: contain;
+
+    opacity: 0.60;
+
+    transition: opacity 0.3s ease;
+
+}
+
  
+
+.footer-contact {
 
-                <div class="hours-row">
+    width: 100%;
 
-                    <span class="hours-day">Monday</span>
+    padding: 20px 0;
 
-                    <span class="hours-time">9:00 AM – 6:00 PM</span>
+    display: flex;
 
-                </div>
+    flex-direction: column;
 
+    align-items: center;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+}
+
  
 
-                <div class="hours-row">
+.footer-contact p {
 
-                    <span class="hours-day">Tuesday</span>
+    margin: 10px 0;
 
-                    <span class="hours-time">9:00 AM – 6:00 PM</span>
+    color: #ffffff;
 
-                </div>
+    font-size: 17px;
 
+}
+
  
+
+.footer-contact a {
 
-                <div class="hours-row">
+    color: #d4af37;
 
-                    <span class="hours-day">Wednesday</span>
+    font-weight: 700;
 
-                    <span class="hours-time">9:00 AM – 6:00 PM</span>
+    text-decoration: none;
 
-                </div>
+}
 
  
 
-                <div class="hours-row">
+.footer-contact a:hover,
 
-                    <span class="hours-day">Thursday</span>
+.footer-contact a:focus {
 
-                    <span class="hours-time">9:00 AM – 6:00 PM</span>
+    color: #ffd700;
 
-                </div>
+    text-decoration: underline;
 
+}
+
  
 
-                <div class="hours-row">
+@media (max-width: 700px) {
 
-                    <span class="hours-day">Friday</span>
+    .section-content {
 
-                    <span class="hours-time">9:00 AM – 6:00 PM</span>
+        padding: 36px 14px;
 
-                </div>
+    }
 
  
+
+    .logo {
 
-                <div class="hours-row">
+        top: 8px;
 
-                    <span class="hours-day">Saturday</span>
+        left: 8px;
 
-                    <span class="hours-time">Closed</span>
+        width: 58px;
 
-                </div>
+    }
 
  
 
-                <div class="hours-row">
+    .book-now {
 
-                    <span class="hours-day">Sunday</span>
+        top: 9px;
 
-                    <span class="hours-time">Closed</span>
+        right: 8px;
 
-                </div>
+        padding: 9px 14px;
 
+        font-size: 14px;
+
+    }
+
  
 
-                <p class="appointment-note">
+    .photo-section {
 
-                    Appointments Required
+        min-height: auto;
 
-                </p>
+    }
 
  
+
+    .photo-section::before {
+
+        background-position: center center;
 
-            </div>
+    }
 
  
 
-        </div>
+    .photo-content {
 
+        padding-top: 50px;
+
+        padding-bottom: 50px;
+
+    }
+
  
 
-    </section>
+    .photo-overlay {
 
+        background: rgba(0, 0, 0, 0.10);
+
+    }
+
  
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
 
-<footer class="footer">
+        gap: 15px;
 
+    }
+
  
+
+    .why-card {
+
+        padding: 20px 15px;
 
-    <div class="footer-box">
+    }
 
  
 
-        <img
+    .pricing-notice {
 
-            src="IMG_7217.jpeg"
+        padding: 20px 14px;
 
-            alt="Carter's K9 Academy"
+    }
 
-            class="footer-picture"
+ 
+
+    .hours-box {
 
-        >
+        padding: 20px 14px;
 
+    }
+
  
+
+    .hours-row {
 
-        <div class="footer-contact">
+        align-items: flex-start;
 
+        font-size: 15px;
+
+    }
+
  
+
+    .footer {
 
-            <p>
+        padding: 28px 12px;
 
-                Email:
+    }
 
-                <a href="mailto:cartersk9academy@gmail.com">
+ 
+
+    .footer-picture {
 
-                    cartersk9academy@gmail.com
+        width: 90%;
 
-                </a>
+        max-width: 560px;
 
-            </p>
+    }
 
  
 
-            <p>
+    .footer-contact p,
 
-                <a
+    .footer-contact a {
 
-                    href="https://facebook.com/CartersK9Academy"
+        font-size: 15px;
 
-                    target="_blank"
+    }
 
-                    rel="noopener noreferrer"
+}
+
+ 
 
-                >
+@media (max-width: 380px) {
 
-                    Follow Carter's K9 Academy on Facebook
+    .logo {
 
-                </a>
+        width: 50px;
 
-            </p>
+    }
 
  
 
-        </div>
+    .book-now {
 
+        padding: 8px 11px;
+
+        font-size: 13px;
+
+    }
+
  
+
+    .hours-row {
 
-    </div>
+        flex-direction: column;
 
+        gap: 2px;
+
+    }
+
  
+
+    .hours-time {
+
+        text-align: left;
 
-</footer>
+    }
