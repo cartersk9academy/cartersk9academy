@@ -1,879 +1,338 @@
-/* ========================================
+<!DOCTYPE html>
+<html lang="en">
 
-   Carter's K9 Academy
+<head>
 
-   Complete Mobile-Friendly CSS
+    <meta charset="UTF-8">
 
-   No Boxes + Faded Images
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-======================================== */
+    <title>Carter's K9 Academy</title>
 
- 
+    <link rel="stylesheet" href="style.css">
 
-* {
+</head>
 
-    box-sizing: border-box;
+<body>
 
-}
+    <header class="hero">
 
- 
+        <img
+            src="IMG_7220.png"
+            alt="Carter's K9 Academy"
+            class="hero-picture"
+        >
 
-html,
+        <img
+            src="IMG_7172.jpeg"
+            alt="Carter's K9 Academy logo"
+            class="logo"
+        >
 
-body {
+        <a
+            href="https://carters-k9-academy.square.site"
+            class="book-now"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Book Now
+        </a>
 
-    width: 100%;
+    </header>
 
-    margin: 0;
 
-    padding: 0;
+    <!-- ========================================
+         TRAINING PROGRAMS & PRICING
+    ========================================= -->
 
-    overflow-x: hidden;
+    <section class="pricing-section">
 
-}
+        <div class="section-content">
 
- 
+            <h1>Training Programs &amp; Pricing</h1>
 
-body {
+            <img
+                src="IMG_7444.png"
+                alt="Carter's K9 Academy training programs and pricing"
+                class="pricing-picture"
+            >
 
-    background: #000000;
 
-    color: #ffffff;
+            <!-- TRAVEL COST -->
 
-    font-family: Arial, Helvetica, sans-serif;
+            <div class="travel-fee">
 
-    line-height: 1.6;
+                Travel Fees Starting at $10
 
-}
+                <span>
+                    Local travel included. Additional travel fees may apply based on distance.
+                </span>
 
- 
+            </div>
 
-img {
 
-    display: block;
+            <!-- PRICING NOTICE -->
 
-    max-width: 100%;
+            <div class="pricing-notice">
 
-}
+                <h2>Pricing Notice</h2>
 
- 
+                <p>
+                    All prices are subject to change without notice.
+                </p>
 
-.hero {
+                <p>
+                    Deposits are required to schedule an appointment.
+                </p>
 
-    position: relative;
+                <p>
+                    We accept Cash, Debit Card, Credit Card,
+                    and Electronic Payment.
+                </p>
 
-    width: 100%;
+            </div>
 
-    background: #000000;
+        </div>
 
-}
+    </section>
 
- 
 
-.hero-picture {
+    <!-- ========================================
+         WHY CHOOSE US
+    ========================================= -->
 
-    width: 100%;
+    <section class="photo-section background-one">
 
-    height: auto;
+        <div class="photo-overlay"></div>
 
-    object-fit: contain;
+        <div class="section-content photo-content">
 
-    opacity: 0.60;
+            <h2>Why Choose Carter's K9 Academy?</h2>
 
-    transition: opacity 0.3s ease;
+            <div class="why-grid">
 
-}
 
- 
+                <div class="why-card">
 
-.logo {
+                    <h3>Private One-on-One Training</h3>
 
-    position: absolute;
+                    <p>
+                        Every lesson is tailored specifically to you and your
+                        dog for personalized attention and lasting results.
+                    </p>
 
-    top: 12px;
+                </div>
 
-    left: 12px;
 
-    z-index: 10;
+                <div class="why-card">
 
-    width: 85px;
+                    <h3>Positive Reinforcement</h3>
 
-    height: auto;
+                    <p>
+                        Reward-based training methods help build confidence,
+                        trust, and a stronger bond.
+                    </p>
 
-    border-radius: 8px;
+                </div>
 
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.55);
 
-}
+                <div class="why-card">
 
- 
+                    <h3>Real-Life Training</h3>
 
-.book-now {
+                    <p>
+                        Training focuses on practical skills your dog can use
+                        every day at home and in public.
+                    </p>
 
-    position: absolute;
+                </div>
 
-    top: 18px;
 
-    right: 12px;
+                <div class="why-card">
 
-    z-index: 10;
+                    <h3>Committed to Your Success</h3>
 
-    display: inline-block;
+                    <p>
+                        We help owners build well-mannered, confident
+                        companions through consistency and guidance.
+                    </p>
 
-    padding: 13px 26px;
+                </div>
 
-    background: #d4af37;
 
-    color: #000000;
+            </div>
 
-    border: none;
+        </div>
 
-    border-radius: 50px;
+    </section>
 
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 
-    font-size: 17px;
+    <!-- ========================================
+         HOURS
+    ========================================= -->
 
-    font-weight: 700;
+    <section class="photo-section background-two">
 
-    line-height: 1.2;
+        <div class="photo-overlay"></div>
 
-    text-align: center;
+        <div class="section-content photo-content">
 
-    text-decoration: none;
+            <h2>Hours</h2>
 
-    transition: background 0.2s ease, transform 0.2s ease;
+            <div class="hours-box">
 
-}
 
- 
+                <div class="hours-row">
 
-.book-now:hover,
+                    <span class="hours-day">
+                        Monday
+                    </span>
 
-.book-now:focus {
+                    <span class="hours-time">
+                        9:00 AM – 6:00 PM
+                    </span>
 
-    background: #ffd700;
+                </div>
 
-    color: #000000;
 
-    transform: translateY(-2px);
+                <div class="hours-row">
 
-}
+                    <span class="hours-day">
+                        Tuesday
+                    </span>
 
- 
+                    <span class="hours-time">
+                        9:00 AM – 6:00 PM
+                    </span>
 
-section {
+                </div>
 
-    width: 100%;
 
-}
+                <div class="hours-row">
 
- 
+                    <span class="hours-day">
+                        Wednesday
+                    </span>
 
-.section-content {
+                    <span class="hours-time">
+                        9:00 AM – 6:00 PM
+                    </span>
 
-    position: relative;
+                </div>
 
-    z-index: 2;
 
-    width: 100%;
+                <div class="hours-row">
 
-    max-width: 1050px;
+                    <span class="hours-day">
+                        Thursday
+                    </span>
 
-    margin: 0 auto;
+                    <span class="hours-time">
+                        9:00 AM – 6:00 PM
+                    </span>
 
-    padding: 48px 18px;
+                </div>
 
-}
 
- 
+                <div class="hours-row">
 
-h1,
+                    <span class="hours-day">
+                        Friday
+                    </span>
 
-h2,
+                    <span class="hours-time">
+                        9:00 AM – 6:00 PM
+                    </span>
 
-h3 {
+                </div>
 
-    color: #d4af37;
 
-    overflow-wrap: anywhere;
+                <div class="hours-row">
 
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.88);
+                    <span class="hours-day">
+                        Saturday
+                    </span>
 
-    background: transparent;
+                    <span class="hours-time">
+                        Closed
+                    </span>
 
-}
+                </div>
 
- 
 
-h1,
+                <div class="hours-row">
 
-h2 {
+                    <span class="hours-day">
+                        Sunday
+                    </span>
 
-    margin: 0 0 25px;
+                    <span class="hours-time">
+                        Closed
+                    </span>
 
-    font-size: clamp(1.6rem, 5vw, 2.25rem);
+                </div>
 
-    line-height: 1.25;
 
-    text-align: center;
+                <p class="appointment-note">
+                    Appointments Required
+                </p>
 
-}
 
- 
+            </div>
 
-p {
+        </div>
 
-    color: #ffffff;
+    </section>
 
-    overflow-wrap: anywhere;
 
-    background: transparent;
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
 
-}
+    <footer class="footer">
 
- 
+        <div class="footer-box">
 
-.pricing-section {
+            <img
+                src="IMG_7217.jpeg"
+                alt="Carter's K9 Academy"
+                class="footer-picture"
+            >
 
-    background:
+            <div class="footer-contact">
 
-        radial-gradient(
+                <p>
 
-            circle at top,
+                    Email:
 
-            rgba(212, 175, 55, 0.14),
+                    <a href="mailto:cartersk9academy@gmail.com">
+                        cartersk9academy@gmail.com
+                    </a>
 
-            transparent 45%
+                </p>
 
-        ),
 
-        #000000;
+                <p>
 
-    text-align: center;
+                    <a
+                        href="https://facebook.com/CartersK9Academy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Follow Carter's K9 Academy on Facebook
+                    </a>
 
-}
+                </p>
 
- 
+            </div>
 
-.pricing-picture {
+        </div>
 
-    width: 100%;
+    </footer>
 
-    max-width: 900px;
+</body>
 
-    height: auto;
-
-    margin: 0 auto;
-
-    object-fit: contain;
-
-    opacity: 0.60;
-
-    transition: opacity 0.3s ease;
-
-}
-
- 
-
-.pricing-notice {
-
-    width: 100%;
-
-    max-width: 750px;
-
-    margin: 28px auto 0;
-
-    padding: 24px 18px;
-
-    text-align: center;
-
-    background: transparent;
-
-    border: none;
-
-    border-radius: 0;
-
-    box-shadow: none;
-
-    backdrop-filter: none;
-
-    -webkit-backdrop-filter: none;
-
-}
-
- 
-
-.pricing-notice h2 {
-
-    margin: 0 0 14px;
-
-    font-size: 1.35rem;
-
-}
-
- 
-
-.pricing-notice p {
-
-    margin: 9px 0;
-
-    color: #ffffff;
-
-    font-size: 16px;
-
-}
-
- 
-
-.photo-section {
-
-    position: relative;
-
-    width: 100%;
-
-    min-height: 500px;
-
-    overflow: hidden;
-
-    background: #000000;
-
-}
-
- 
-
-.photo-section::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 0;
-
-    background-position: center center;
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    opacity: 0.60;
-
-}
-
- 
-
-.background-one {
-
-    background-image: none;
-
-}
-
- 
-
-.background-one::before {
-
-    background-image: url("./1000014129.jpeg");
-
-}
-
- 
-
-.background-two {
-
-    background-image: none;
-
-}
-
- 
-
-.background-two::before {
-
-    background-image: url("./IMG_7216.jpeg");
-
-}
-
- 
-
-.photo-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-
-    background: rgba(0, 0, 0, 0.08);
-
-}
-
- 
-
-.photo-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    padding-top: 70px;
-
-    padding-bottom: 70px;
-
-}
-
- 
-
-.why-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-
-}
-
- 
-
-.why-card {
-
-    min-width: 0;
-
-    padding: 24px 18px;
-
-    text-align: center;
-
-    background: transparent;
-
-    border: none;
-
-    border-radius: 0;
-
-    box-shadow: none;
-
-    backdrop-filter: none;
-
-    -webkit-backdrop-filter: none;
-
-}
-
- 
-
-.why-card h3 {
-
-    margin: 0 0 12px;
-
-    font-size: 1.2rem;
-
-    line-height: 1.3;
-
-}
-
- 
-
-.why-card p {
-
-    margin: 0;
-
-    color: #ffffff;
-
-    font-size: 16px;
-
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
-
-}
-
- 
-
-.hours-box {
-
-    width: 100%;
-
-    max-width: 650px;
-
-    margin: 0 auto;
-
-    padding: 24px 18px;
-
-    background: transparent;
-
-    border: none;
-
-    border-radius: 0;
-
-    box-shadow: none;
-
-    backdrop-filter: none;
-
-    -webkit-backdrop-filter: none;
-
-}
-
- 
-
-.hours-row {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 18px;
-
-    padding: 10px 0;
-
-    border-bottom: none;
-
-    color: #ffffff;
-
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
-
-}
-
- 
-
-.hours-day {
-
-    color: #d4af37;
-
-    font-weight: 700;
-
-}
-
- 
-
-.hours-time {
-
-    color: #ffffff;
-
-    text-align: right;
-
-}
-
- 
-
-.appointment-note {
-
-    margin: 22px 0 0;
-
-    color: #d4af37;
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    text-align: center;
-
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
-
-}
-
- 
-
-.footer {
-
-    width: 100%;
-
-    padding: 40px 16px;
-
-    background: #000000;
-
-    border-top: 2px solid #d4af37;
-
-}
-
- 
-
-.footer-box {
-
-    width: 100%;
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: transparent;
-
-    border: none;
-
-    border-radius: 0;
-
-    box-shadow: none;
-
-}
-
- 
-
-.footer-picture {
-
-    display: block;
-
-    width: 75%;
-
-    max-width: 650px;
-
-    height: auto;
-
-    margin: 0 auto 20px;
-
-    object-fit: contain;
-
-    opacity: 0.60;
-
-    transition: opacity 0.3s ease;
-
-}
-
- 
-
-.footer-contact {
-
-    width: 100%;
-
-    padding: 20px 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-
-    background: transparent;
-
-    border: none;
-
-    border-radius: 0;
-
-    box-shadow: none;
-
-}
-
- 
-
-.footer-contact p {
-
-    margin: 10px 0;
-
-    color: #ffffff;
-
-    font-size: 17px;
-
-}
-
- 
-
-.footer-contact a {
-
-    color: #d4af37;
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-}
-
- 
-
-.footer-contact a:hover,
-
-.footer-contact a:focus {
-
-    color: #ffd700;
-
-    text-decoration: underline;
-
-}
-
- 
-
-@media (max-width: 700px) {
-
-    .section-content {
-
-        padding: 36px 14px;
-
-    }
-
- 
-
-    .logo {
-
-        top: 8px;
-
-        left: 8px;
-
-        width: 58px;
-
-    }
-
- 
-
-    .book-now {
-
-        top: 9px;
-
-        right: 8px;
-
-        padding: 9px 14px;
-
-        font-size: 14px;
-
-    }
-
- 
-
-    .photo-section {
-
-        min-height: auto;
-
-    }
-
- 
-
-    .photo-section::before {
-
-        background-position: center center;
-
-    }
-
- 
-
-    .photo-content {
-
-        padding-top: 50px;
-
-        padding-bottom: 50px;
-
-    }
-
- 
-
-    .photo-overlay {
-
-        background: rgba(0, 0, 0, 0.10);
-
-    }
-
- 
-
-    .why-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-
-    }
-
- 
-
-    .why-card {
-
-        padding: 20px 15px;
-
-    }
-
- 
-
-    .pricing-notice {
-
-        padding: 20px 14px;
-
-    }
-
- 
-
-    .hours-box {
-
-        padding: 20px 14px;
-
-    }
-
- 
-
-    .hours-row {
-
-        align-items: flex-start;
-
-        font-size: 15px;
-
-    }
-
- 
-
-    .footer {
-
-        padding: 28px 12px;
-
-    }
-
- 
-
-    .footer-picture {
-
-        width: 90%;
-
-        max-width: 560px;
-
-    }
-
- 
-
-    .footer-contact p,
-
-    .footer-contact a {
-
-        font-size: 15px;
-
-    }
-
-}
-
- 
-
-@media (max-width: 380px) {
-
-    .logo {
-
-        width: 50px;
-
-    }
-
- 
-
-    .book-now {
-
-        padding: 8px 11px;
-
-        font-size: 13px;
-
-    }
-
- 
-
-    .hours-row {
-
-        flex-direction: column;
-
-        gap: 2px;
-
-    }
-
- 
-
-    .hours-time {
-
-        text-align: left;
-
-    }
+</html>
